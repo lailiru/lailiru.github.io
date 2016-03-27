@@ -4,27 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>安卓开发环境的搭建 | Lailiru&#39;s blog</title>
+  <title>phonedail | Lailiru&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="按照视频搭建安卓开发环境，过程中还是出现了很多问题。
-安卓开发环境详细的安装过程可以看五步搞定Android开发环境部署——非常详细的Android开发环境搭建教程这篇博客，这里介绍的是独立安装工具的。我下载的是集成环境的，少去了需要自己安装SDK和ADT工具的步骤。">
+  <meta name="description" content="自己实践做出的第一个简单小应用电话拨号器,下面为实现步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安卓开发环境的搭建">
-<meta property="og:url" content="http://lailiru.com/2016/03/16/安卓开发环境的搭建/index.html">
+<meta property="og:title" content="phonedail">
+<meta property="og:url" content="http://lailiru.com/2016/03/27/phonedail/index.html">
 <meta property="og:site_name" content="Lailiru's blog">
-<meta property="og:description" content="按照视频搭建安卓开发环境，过程中还是出现了很多问题。
-安卓开发环境详细的安装过程可以看五步搞定Android开发环境部署——非常详细的Android开发环境搭建教程这篇博客，这里介绍的是独立安装工具的。我下载的是集成环境的，少去了需要自己安装SDK和ADT工具的步骤。">
-<meta property="og:image" content="http://lailiru.com/img/环境1.png">
-<meta property="og:image" content="http://lailiru.com/img/环境2.png">
-<meta property="og:image" content="http://lailiru.com/img/环境3.png">
-<meta property="og:image" content="http://lailiru.com/img/环境4.png">
-<meta property="og:image" content="http://lailiru.com/img/环境5.png">
-<meta property="og:updated_time" content="2016-03-27T01:56:15.025Z">
+<meta property="og:description" content="自己实践做出的第一个简单小应用电话拨号器,下面为实现步骤。">
+<meta property="og:updated_time" content="2016-03-27T03:27:50.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安卓开发环境的搭建">
-<meta name="twitter:description" content="按照视频搭建安卓开发环境，过程中还是出现了很多问题。
-安卓开发环境详细的安装过程可以看五步搞定Android开发环境部署——非常详细的Android开发环境搭建教程这篇博客，这里介绍的是独立安装工具的。我下载的是集成环境的，少去了需要自己安装SDK和ADT工具的步骤。">
-<meta name="twitter:image" content="http://lailiru.com/img/环境1.png">
+<meta name="twitter:title" content="phonedail">
+<meta name="twitter:description" content="自己实践做出的第一个简单小应用电话拨号器,下面为实现步骤。">
   
     <link rel="alternative" href="/atom.xml" title="Lailiru&#39;s blog" type="application/atom+xml">
   
@@ -164,11 +155,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-安卓开发环境的搭建" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-phonedail" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/16/安卓开发环境的搭建/" class="article-date">
-  	<time datetime="2016-03-15T16:04:44.000Z" itemprop="datePublished">2016-03-16</time>
+      <a href="/2016/03/27/phonedail/" class="article-date">
+  	<time datetime="2016-03-27T01:55:12.000Z" itemprop="datePublished">2016-03-27</time>
 </a>
     </div>
   
@@ -181,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      安卓开发环境的搭建
+      phonedail
     </h1>
   
 
@@ -201,18 +192,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>按照视频搭建安卓开发环境，过程中还是出现了很多问题。</p>
-<p>安卓开发环境详细的安装过程可以看<a href="http://www.cnblogs.com/zoupeiyang/p/4034517.html" target="_blank" rel="external">五步搞定Android开发环境部署——非常详细的Android开发环境搭建教程</a>这篇博客，这里介绍的是独立安装工具的。<br>我下载的是集成环境的，少去了需要自己安装SDK和ADT工具的步骤。<br><a id="more"></a><br>将下载的文件解压后<br><img src="/img/环境1.png" alt=""></p>
-<p>打开eclipse通过Android SDK Manage添加新的软件包时却看不见可以更新的安装包。<br><img src="/img/环境2.png" alt=""></p>
-<p>点击更新安装已有的软件包时显示连接不上谷歌的网址，因为国内有墙，所以会出现获取失败的情况。<br><img src="/img/环境3.png" alt=""></p>
-<p>最后是以下面的方法解决了这个问题，打开Android SDK Maneger-&gt;Tools修改图中的选项。<br><img src="/img/环境4.png" alt=""></p>
-<p>下面才是Android SDK Maneger正确的打开方式。<br><img src="/img/环境5.png" alt=""></p>
-<p>然后便可以勾选要更新的软件包啦，出现有些更新失败的情况只要不断重新关闭SDK Maneger再开启更新就可以了。</p>
-<p>解决了SDK问题又遇到ADT版本太低的问题，由于更新了SDK而ADT的版本还没跟上，设置Android Preferences的时候就会出现This Android SDK requires Android Developer Toolkit version 23.0.0 or above…….<br>解决方法如下：找到android-sdk-windows\tools\lib下的plugin.prop文件修改其中的版本号与所安装的ADT版本号相同就可以了。</p>
-<hr>
-<p>推荐资源：</p>
-<p>集成环境下载：<br><a href="http://www.androiddevtools.cn/" target="_blank" rel="external">AndroidDe vTools</a></p>
-
+        <p>自己实践做出的第一个简单小应用电话拨号器,下面为实现步骤。<br><a id="more"></a></p>
+<p><strong>【1】画UI</strong></p>
+<p><strong>【2】根据UI写业务逻辑</strong></p>
+<p>在mainActivity里面写<br>在onCreate方法里面写逻辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>ContentView(R.layout.activity_main);</span><br><span class="line">//[1]找到我们关心的控件  EditText Button</span><br><span class="line">et_number = (EditText) findViewById(R.id.editText1);</span><br><span class="line">//[2]找到按钮</span><br><span class="line">Button btn_call = (Button) findViewById(R.id.button1);</span><br></pre></td></tr></table></figure>
+<p><strong>【3】给按钮设置一个点击事件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btn_call.setOnClickListener(new MyClickListener());</span><br></pre></td></tr></table></figure>
+<p><strong>【4】自己定义一个类去实现方法需要的参数类型</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">private class MyClickListener implements OnClickListener&#123;</span><br><span class="line">	//Called when a view has been click.</span><br><span class="line">	@Override</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		// [4]获取EditText文本内容</span><br><span class="line">		String number = et_number.getText().toString().trim();</span><br><span class="line">		<span class="keyword">if</span>(<span class="string">""</span>.equals(number))&#123;</span><br><span class="line">			/**</span><br><span class="line">			 * context 上下文</span><br><span class="line">			 */</span><br><span class="line">			Toast.makeText(MainActivity.this, <span class="string">"number不能为空"</span>,1).show();</span><br><span class="line">			<span class="built_in">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		// [5]进行拨打电话 意图Intent</span><br><span class="line">		Intent intent = new Intent();  //创建一个意图对象</span><br><span class="line">		//[5.1]设置动作</span><br><span class="line">		intent.setAction(Intent.ACTION_CALL);</span><br><span class="line">		//[5.2]设置要拨打的数据</span><br><span class="line">		/**</span><br><span class="line">		 * uri:统一资源标识符   自己定义的路径，想代表什么就代表说明</span><br><span class="line">		 * url:统一资源定位器   www.baidu.com</span><br><span class="line">		 */</span><br><span class="line">		intent.setData(Uri.parse(<span class="string">"tel:"</span>+number));</span><br><span class="line">		//[6]开启意图</span><br><span class="line">		startActivity(intent);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>【5】加上拨打电话的权限</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=<span class="string">"android.permission.CALL_PHONE"</span>/&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -221,18 +211,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/18/蓝，另一种蓝/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/27/安卓工程的目录结构/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          蓝，另一种蓝
+          安卓工程的目录结构
         
       </div>
     </a>
   
   
-    <a href="/2016/03/13/Introduction/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Introduction</div>
+    <a href="/2016/03/18/蓝，另一种蓝/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">蓝，另一种蓝</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
