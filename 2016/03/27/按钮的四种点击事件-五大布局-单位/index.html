@@ -6,18 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>按钮的四种点击事件&amp;五大布局&amp;单位 | Lailiru&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="按钮的四种点击事件【1】定义一个内部类去实现
+  <meta name="description" content="按钮的四种点击事件【1】定义一个点击事件监听器类
+让其实现View.OnClickListener的onClick(View v)方法
+12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;
 【2】通过匿名内部类去实现">
 <meta property="og:type" content="article">
 <meta property="og:title" content="按钮的四种点击事件&五大布局&单位">
 <meta property="og:url" content="http://lailiru.com/2016/03/27/按钮的四种点击事件-五大布局-单位/index.html">
 <meta property="og:site_name" content="Lailiru's blog">
-<meta property="og:description" content="按钮的四种点击事件【1】定义一个内部类去实现
+<meta property="og:description" content="按钮的四种点击事件【1】定义一个点击事件监听器类
+让其实现View.OnClickListener的onClick(View v)方法
+12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;
 【2】通过匿名内部类去实现">
-<meta property="og:updated_time" content="2016-03-27T09:06:33.808Z">
+<meta property="og:updated_time" content="2016-04-17T08:55:52.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="按钮的四种点击事件&五大布局&单位">
-<meta name="twitter:description" content="按钮的四种点击事件【1】定义一个内部类去实现
+<meta name="twitter:description" content="按钮的四种点击事件【1】定义一个点击事件监听器类
+让其实现View.OnClickListener的onClick(View v)方法
+12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;
 【2】通过匿名内部类去实现">
   
     <link rel="alternative" href="/atom.xml" title="Lailiru&#39;s blog" type="application/atom+xml">
@@ -195,7 +201,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="按钮的四种点击事件"><a href="#按钮的四种点击事件" class="headerlink" title="按钮的四种点击事件"></a>按钮的四种点击事件</h2><p><strong>【1】定义一个内部类去实现</strong></p>
+        <h2 id="按钮的四种点击事件"><a href="#按钮的四种点击事件" class="headerlink" title="按钮的四种点击事件"></a>按钮的四种点击事件</h2><p><strong>【1】定义一个点击事件监听器类</strong></p>
+<p>让其实现View.OnClickListener的onClick(View v)方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class MyOnClickListener implements View.OnClicklistener&#123;</span><br><span class="line">	public void onClick(View v)&#123;</span><br><span class="line">	...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>【2】通过匿名内部类去实现</strong><br><a id="more"></a><br><strong>【3】让当前实现OnClickListener接口类型</strong>（用于布局里面有很多按钮需要被点击的时候）</p>
 <p><strong>【4】在按钮的布局上加上一个onClick属性，在Activity里面定义一个方法名和属性名相同</strong>（适合自己做一些demo）</p>
 <h2 id="五大布局"><a href="#五大布局" class="headerlink" title="五大布局"></a>五大布局</h2><p>【1】线性布局（常用）</p>
