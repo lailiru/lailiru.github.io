@@ -8,23 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="按钮的四种点击事件【1】定义一个点击事件监听器类
 让其实现View.OnClickListener的onClick(View v)方法
-12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;
-【2】通过匿名内部类去实现">
+12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="按钮的四种点击事件&五大布局&单位">
 <meta property="og:url" content="http://lailiru.com/2016/03/27/按钮的四种点击事件-五大布局-单位/index.html">
 <meta property="og:site_name" content="Lailiru's blog">
 <meta property="og:description" content="按钮的四种点击事件【1】定义一个点击事件监听器类
 让其实现View.OnClickListener的onClick(View v)方法
-12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;
-【2】通过匿名内部类去实现">
-<meta property="og:updated_time" content="2016-04-17T08:55:52.580Z">
+12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;">
+<meta property="og:updated_time" content="2016-04-17T09:32:57.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="按钮的四种点击事件&五大布局&单位">
 <meta name="twitter:description" content="按钮的四种点击事件【1】定义一个点击事件监听器类
 让其实现View.OnClickListener的onClick(View v)方法
-12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;
-【2】通过匿名内部类去实现">
+12345class MyOnClickListener implements View.OnClicklistener&amp;#123;	public void onClick(View v)&amp;#123;	...	&amp;#125;&amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="Lailiru&#39;s blog" type="application/atom+xml">
   
@@ -108,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Informal-essays/" style="font-size: 15px;">Informal essays</a>
+						<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
 					</div>
 				</section>
 				
@@ -204,8 +201,20 @@
         <h2 id="按钮的四种点击事件"><a href="#按钮的四种点击事件" class="headerlink" title="按钮的四种点击事件"></a>按钮的四种点击事件</h2><p><strong>【1】定义一个点击事件监听器类</strong></p>
 <p>让其实现View.OnClickListener的onClick(View v)方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class MyOnClickListener implements View.OnClicklistener&#123;</span><br><span class="line">	public void onClick(View v)&#123;</span><br><span class="line">	...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>【2】通过匿名内部类去实现</strong><br><a id="more"></a><br><strong>【3】让当前实现OnClickListener接口类型</strong>（用于布局里面有很多按钮需要被点击的时候）</p>
-<p><strong>【4】在按钮的布局上加上一个onClick属性，在Activity里面定义一个方法名和属性名相同</strong>（适合自己做一些demo）</p>
+<a id="more"></a>
+<p>然后注册到按钮上<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btn.setOnclickListener(new MyOnClickListener());</span><br></pre></td></tr></table></figure></p>
+<p><strong>【2】通过匿名内部类去实现</strong></p>
+<p>当监听器只适用一个按钮时，可以将上面一个方法简化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">btn.setOnClickListener(new View.<span class="function"><span class="title">OnClickListener</span></span>()&#123;</span><br><span class="line">	public void onClick(View v)&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line">&#125;)；</span><br></pre></td></tr></table></figure>
+<p><strong>【3】让当前Activity去实现View.OnClickListener</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btn.setOnClickListener(this);</span><br></pre></td></tr></table></figure>
+<p>用于布局里面有很多按钮需要被点击的时候</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public void onClick(View v)&#123;</span><br><span class="line">	switch(v.getId())&#123;</span><br><span class="line">	<span class="keyword">case</span> R.id.btn_login:</span><br><span class="line">	login();</span><br><span class="line">	<span class="built_in">break</span>;</span><br><span class="line">	<span class="keyword">case</span> R.id.btn_regist:</span><br><span class="line">	regist();</span><br><span class="line">	<span class="built_in">break</span>;</span><br><span class="line">	default:</span><br><span class="line">	dosomthing();</span><br><span class="line">	<span class="built_in">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>【4】在按钮的布局上加上一个onClick属性，在Activity里面定义一个方法名和属性名相同</strong></p>
+<p>适合自己做一些demo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button</span><br><span class="line">	android:onClick=<span class="string">"click"</span></span><br><span class="line">	android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">	android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">	android:text=<span class="string">"@string/btn_text"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>这样按钮点击时会利用反射的方式调用对应Activity中的click()方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void click(View v)&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="五大布局"><a href="#五大布局" class="headerlink" title="五大布局"></a>五大布局</h2><p>【1】线性布局（常用）</p>
 <p>【2】相对布局（常用）</p>
 <p>【3】帧布局</p>
@@ -223,15 +232,6 @@
   
     
 <nav id="article-nav">
-  
-    <a href="/2016/03/30/你的孤独，虽败犹荣/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          你的孤独，虽败犹荣
-        
-      </div>
-    </a>
   
   
     <a href="/2016/03/27/adb指令/" id="article-nav-older" class="article-nav-link-wrap">
