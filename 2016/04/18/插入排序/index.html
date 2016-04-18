@@ -4,21 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>安卓工程的目录结构 | Lailiru&#39;s blog</title>
+  <title>插入排序 | Lailiru&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="src：存源代码
-gen:R文件">
+  <meta name="description" content="插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。
+直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。
+123456789101112void insort(int s[],int n)&amp;#123; //自定义函数insort() ，将输入数组由小到大进行排序	int i,j;	for(i=2;i&amp;lt;=n;i++)&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安卓工程的目录结构">
-<meta property="og:url" content="http://lailiru.com/2016/03/27/安卓工程的目录结构/index.html">
+<meta property="og:title" content="插入排序">
+<meta property="og:url" content="http://lailiru.com/2016/04/18/插入排序/index.html">
 <meta property="og:site_name" content="Lailiru's blog">
-<meta property="og:description" content="src：存源代码
-gen:R文件">
-<meta property="og:updated_time" content="2016-03-27T02:33:24.666Z">
+<meta property="og:description" content="插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。
+直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。
+123456789101112void insort(int s[],int n)&amp;#123; //自定义函数insort() ，将输入数组由小到大进行排序	int i,j;	for(i=2;i&amp;lt;=n;i++)&amp;">
+<meta property="og:updated_time" content="2016-04-18T15:48:01.157Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安卓工程的目录结构">
-<meta name="twitter:description" content="src：存源代码
-gen:R文件">
+<meta name="twitter:title" content="插入排序">
+<meta name="twitter:description" content="插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。
+直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。
+123456789101112void insort(int s[],int n)&amp;#123; //自定义函数insort() ，将输入数组由小到大进行排序	int i,j;	for(i=2;i&amp;lt;=n;i++)&amp;">
   
     <link rel="alternative" href="/atom.xml" title="Lailiru&#39;s blog" type="application/atom+xml">
   
@@ -158,11 +161,11 @@ gen:R文件">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-安卓工程的目录结构" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-插入排序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/27/安卓工程的目录结构/" class="article-date">
-  	<time datetime="2016-03-27T02:28:14.000Z" itemprop="datePublished">2016-03-27</time>
+      <a href="/2016/04/18/插入排序/" class="article-date">
+  	<time datetime="2016-04-18T15:41:30.000Z" itemprop="datePublished">2016-04-18</time>
 </a>
     </div>
   
@@ -175,7 +178,7 @@ gen:R文件">
         
   
     <h1 class="article-title" itemprop="name">
-      安卓工程的目录结构
+      插入排序
     </h1>
   
 
@@ -184,7 +187,7 @@ gen:R文件">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序/">排序</a></li></ul>
 	</div>
 
         
@@ -195,14 +198,9 @@ gen:R文件">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>src：存源代码</p>
-<p>gen:R文件<br><a id="more"></a><br>bin:apk文件</p>
-<p>assets:资产目录</p>
-<p>libs:额外的jar包</p>
-<p>drawable:存图片资源</p>
-<p>values:字符串</p>
-<p>安卓的清单文件AndroidMainfest.xml：Android的四大组件（Activity broadCastReceiver service ContentProvider）都需要在清单文件里面配置</p>
-
+        <p>插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。</p>
+<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void insort(int s[],int n)&#123; //自定义函数insort() ，将输入数组由小到大进行排序</span><br><span class="line">	int i,j;</span><br><span class="line">	<span class="keyword">for</span>(i=2;i&lt;=n;i++)&#123;      //数组下标从2开始，s[0]做监视哨 </span><br><span class="line">		s[0]=s[i];          //给监视哨赋值 </span><br><span class="line">		j=i-1;              //确定要比较元素的最右边位置 </span><br><span class="line">		<span class="keyword">while</span>(s[0]&lt;s[j])&#123;   //数据右移 </span><br><span class="line">			s[j+1]=s[j];    //移向左边一个未比较的数 </span><br><span class="line">			j--;</span><br><span class="line">		&#125; </span><br><span class="line">		s[j+1]=s[0];         //在确定的位置插入s[i] </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -211,18 +209,9 @@ gen:R文件">
     
 <nav id="article-nav">
   
-    <a href="/2016/03/27/adb指令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          adb指令
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/27/phonedail/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">phonedail</div>
+    <a href="/2016/03/27/按钮的四种点击事件-五大布局-单位/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">按钮的四种点击事件&amp;五大布局&amp;单位</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
