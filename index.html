@@ -182,9 +182,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>冒泡排序的基本思路是，如果要对n个数进行冒泡排序，那么要进行n-1趟比较，在第1趟比较中要进行n-1次两两比较，在第j趟比较中药进行n-j次两两比较。从这个基本思路中就会发现，趟数决定了两两比较的次数，这样就很容易将两个for循环联系起来了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void sort(int a[],int n)&#123;</span><br><span class="line">	int i,j,t;</span><br><span class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)          //变量i代表比较的趟数 </span><br><span class="line">		<span class="keyword">for</span>(j=1;j&lt;n+1-i;j++)  //变量j代表每趟两两比较的次数 </span><br><span class="line">			<span class="keyword">if</span>(a[j]&gt;a[j+1])&#123;</span><br><span class="line">				t=a[j];        //利用中间变量实现两值互换 </span><br><span class="line">				a[j]=a[j+1];</span><br><span class="line">				a[j+1]=t;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p>冒泡排序的基本思路是，如果要对n个数进行冒泡排序，那么要进行n-1趟比较，在第1趟比较中要进行n-1次两两比较，在第j趟比较中药进行n-j次两两比较。从这个基本思路中就会发现，趟数决定了两两比较的次数，这样就很容易将两个for循环联系起来了。<br>
       
     </div>
     
@@ -197,6 +195,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/19/冒泡排序/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
