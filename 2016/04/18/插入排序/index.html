@@ -7,21 +7,18 @@
   <title>插入排序 | Lailiru&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。
-直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。
-123456789101112void insort(int s[],int n)&amp;#123; //自定义函数insort() ，将输入数组由小到大进行排序	int i,j;	for(i=2;i&amp;lt;=n;i++)&amp;">
+直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="插入排序">
 <meta property="og:url" content="http://lailiru.com/2016/04/18/插入排序/index.html">
 <meta property="og:site_name" content="Lailiru's blog">
 <meta property="og:description" content="插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。
-直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。
-123456789101112void insort(int s[],int n)&amp;#123; //自定义函数insort() ，将输入数组由小到大进行排序	int i,j;	for(i=2;i&amp;lt;=n;i++)&amp;">
-<meta property="og:updated_time" content="2016-04-18T15:48:01.157Z">
+直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。">
+<meta property="og:updated_time" content="2016-04-18T16:22:26.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插入排序">
 <meta name="twitter:description" content="插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。
-直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。
-123456789101112void insort(int s[],int n)&amp;#123; //自定义函数insort() ，将输入数组由小到大进行排序	int i,j;	for(i=2;i&amp;lt;=n;i++)&amp;">
+直接插入排序其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。">
   
     <link rel="alternative" href="/atom.xml" title="Lailiru&#39;s blog" type="application/atom+xml">
   
@@ -199,8 +196,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。</p>
-<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。</p>
+<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。<br><a id="more"></a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void insort(int s[],int n)&#123; //自定义函数insort() ，将输入数组由小到大进行排序</span><br><span class="line">	int i,j;</span><br><span class="line">	<span class="keyword">for</span>(i=2;i&lt;=n;i++)&#123;      //数组下标从2开始，s[0]做监视哨 </span><br><span class="line">		s[0]=s[i];          //给监视哨赋值 </span><br><span class="line">		j=i-1;              //确定要比较元素的最右边位置 </span><br><span class="line">		<span class="keyword">while</span>(s[0]&lt;s[j])&#123;   //数据右移 </span><br><span class="line">			s[j+1]=s[j];    //移向左边一个未比较的数 </span><br><span class="line">			j--;</span><br><span class="line">		&#125; </span><br><span class="line">		s[j+1]=s[0];         //在确定的位置插入s[i] </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>希尔排序是在直接插入排序的基础上做的改进，也就是将要排序的序列按固定增量分成若干组，等距离者在同一组中，然后再在组内进行直接插入排序。这里面的固定增量从n/2开始，以后每次缩小到原来的一半。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">void shsort(int s[],int n)&#123;              //自定义函数shsort() ，将输入数组由小到大进行排序 </span><br><span class="line">	int i,j,d;</span><br><span class="line">	d=n/2;                               //确定固定增量值 </span><br><span class="line">	<span class="keyword">while</span>(d&gt;=1)&#123;</span><br><span class="line">		<span class="keyword">for</span>(i=d+1;i&lt;=n;i++)&#123;             //数组下标从d+1开始进行直接插入排序 </span><br><span class="line">			s[0]=s[i];                   //设置监视哨 </span><br><span class="line">			j=i<span class="_">-d</span>;                       //确定要进行比较的元素的最右边位置 </span><br><span class="line">			<span class="keyword">while</span>((j&gt;0)&amp;&amp;(s[0]&lt;s[j]))&#123;</span><br><span class="line">				s[j+d]=s[j];              //数据右移 </span><br><span class="line">				j=j<span class="_">-d</span>;                    //向左移d个位置 </span><br><span class="line">			&#125;</span><br><span class="line">			s[j+d]=s[0];                  //在确定的位置插入s[i]                 </span><br><span class="line">		&#125;</span><br><span class="line">		d=d/2;                            //增量变为原来的一半 </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     

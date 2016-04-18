@@ -183,8 +183,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。</p>
-<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void insort(int s[],int n)&#123; //自定义函数insort() ，将输入数组由小到大进行排序</span><br><span class="line">	int i,j;</span><br><span class="line">	<span class="keyword">for</span>(i=2;i&lt;=n;i++)&#123;      //数组下标从2开始，s[0]做监视哨 </span><br><span class="line">		s[0]=s[i];          //给监视哨赋值 </span><br><span class="line">		j=i-1;              //确定要比较元素的最右边位置 </span><br><span class="line">		<span class="keyword">while</span>(s[0]&lt;s[j])&#123;   //数据右移 </span><br><span class="line">			s[j+1]=s[j];    //移向左边一个未比较的数 </span><br><span class="line">			j--;</span><br><span class="line">		&#125; </span><br><span class="line">		s[j+1]=s[0];         //在确定的位置插入s[i] </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左一次比较其关键字的大小。<br>
       
     </div>
     
@@ -197,6 +196,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/18/插入排序/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
